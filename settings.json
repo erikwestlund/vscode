@@ -1,0 +1,118 @@
+{
+    "intelephense.format.braces": "k&r",
+    "intelephense.format.arrayAlign": true,
+    "intelephense.format.arraySpacing": true,
+    "intelephense.format.arrowSpacing": true,
+    "intelephense.format.spaceAfterArrayKey": true,
+    "intelephense.format.spaceBeforeArrayKey": true,
+    "intelephense.format.spaceAfterArrayArrow": true,
+    "intelephense.format.spaceBeforeArrayArrow": true,
+    "intelephense.format.alignKeyValuePairs": true,
+    "intelephense.format.alignArrowPairs": true,
+    "intelephense.format.alignArrayPairs": true,
+    "editor.formatOnSave": true,
+    "[php]": {
+        "editor.defaultFormatter": "junstyle.php-cs-fixer",
+        "editor.formatOnSave": true
+    },
+    "php-cs-fixer.executablePath": "${workspaceFolder}/vendor/bin/php-cs-fixer",
+    "php-cs-fixer.config": ".php-cs-fixer.php",
+    "php-cs-fixer.onsave": true,
+    "php-cs-fixer.rules": "@PSR12",
+    "[r]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.defaultFormatter": "REditorSupport.r"
+    },
+    "r.lsp.enabled": true,
+    "r.linting.enable": true,
+    "r.linting.lintOnSave": true,
+    "r.linting.lintr.options": {
+        "indent_by": 2
+    },
+    "r.bracketedPaste": true,
+    "r.rterm.mac": "/usr/local/bin/R",
+    "r.rpath.mac": "/usr/local/bin/R",
+    "r.alwaysUseActiveTerminal": true,
+    "r.terminal": "integrated",
+    "r.debugger": {
+        "path": "/usr/local/bin/R"
+    },
+    "r.sessionWatcher": true,
+    "r.workspaceViewer.showOnStartup": true,
+    "r.workspaceViewer.showOnLoad": true,
+    "r.workspaceViewer.showOnSave": true,
+    "r.workspaceViewer.showOnExecute": true,
+    "r.workspaceViewer.showOnDebug": true,
+    "r.workspaceViewer.showOnError": true,
+    "r.workspaceViewer.showOnWarning": true,
+    "r.workspaceViewer.showOnMessage": true,
+    "r.workspaceViewer.showOnInfo": true,
+    "r.workspaceViewer.showOnDebugBreak": true,
+    "r.workspaceViewer.showOnDebugContinue": true,
+    "r.workspaceViewer.showOnDebugStep": true,
+    "r.workspaceViewer.showOnDebugStepInto": true,
+    "r.workspaceViewer.showOnDebugStepOut": true,
+    "r.workspaceViewer.showOnDebugRestart": true,
+    "r.workspaceViewer.showOnDebugStop": true,
+    "r.commands": [
+        {
+            "name": "R: View Data Frame",
+            "command": "view_df(${selection})",
+            "when": "editorLangId == 'r'",
+            "group": "r"
+        },
+        {
+            "name": "R: View Data Frame (Interactive)",
+            "command": "DT::datatable(${selection})",
+            "when": "editorLangId == 'r'",
+            "group": "r"
+        },
+        {
+            "name": "R: View Data Frame (Summary)",
+            "command": "summary(${selection})",
+            "when": "editorLangId == 'r'",
+            "group": "r"
+        }
+    ],
+    "r.previewDataframe": false,
+    "r.previewDataframeCommand": "view_df(${selection})",
+    "r.lsp.diagnostics": true,
+    "r.lsp.completion": true,
+    "r.lsp.hover": true,
+    "r.lsp.signature": true,
+    "r.lsp.definition": true,
+    "r.lsp.references": true,
+    "r.lsp.rename": true,
+    "r.lsp.symbols": true,
+    "r.lsp.workspace": true,
+    "r.lsp.documentSymbol": true,
+    "r.lsp.documentHighlight": true,
+    "r.lsp.codeAction": true,
+    "r.lsp.codeLens": true,
+    "r.lsp.formatting": true,
+    "r.lsp.rangeFormatting": true,
+    "r.lsp.onTypeFormatting": true,
+    "r.lsp.foldingRange": true,
+    "r.lsp.selectionRange": true,
+    "r.lsp.semanticTokens": true,
+    "r.lsp.inlayHints": true,
+    "r.lsp.callHierarchy": true,
+    "r.lsp.typeHierarchy": true,
+    "r.lsp.implementation": true,
+    "r.lsp.declaration": true,
+    "r.lsp.typeDefinition": true,
+    "r.lsp.documentColor": true,
+    "r.lsp.colorPresentation": true,
+    "r.lsp.documentLink": true,
+    "r.lsp.documentLinkResolve": true,
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.profiles.osx": {
+        "zsh": {
+            "path": "/opt/homebrew/bin/zsh",
+            "args": []
+        }
+    }
+}

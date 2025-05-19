@@ -1,0 +1,70 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "View Data Frame",
+            "type": "shell",
+            "command": "Rscript",
+            "args": [
+                "-e",
+                "view_df(${input:selectedText})"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Better Shoes (zsh)",
+            "type": "shell",
+            "command": "cd ${workspaceFolder} && /opt/homebrew/bin/zsh",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "terminals"
+            }
+        },
+        {
+            "label": "Framework (zsh)",
+            "type": "shell",
+            "command": "cd ${workspaceFolder}/../framework && /opt/homebrew/bin/zsh",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "terminals"
+            }
+        },
+        {
+            "label": "Better Shoes (R)",
+            "type": "shell",
+            "command": "cd ${workspaceFolder}/R && /usr/local/bin/R",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "terminals"
+            }
+        },
+        {
+            "label": "Framework (R)",
+            "type": "shell",
+            "command": "cd ${workspaceFolder}/../framework && /usr/local/bin/R",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "group": "terminals"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "selectedText",
+            "type": "promptString",
+            "description": "Variable to view"
+        }
+    ]
+}
