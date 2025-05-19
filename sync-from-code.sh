@@ -8,8 +8,10 @@ cd "$SCRIPT_DIR"
 echo "Pulling latest changes..."
 git pull
 
-# Create VS Code user directory if it doesn't exist
+# Define VS Code directory
 VSCODE_USER_DIR=~/Library/Application\ Support/Code/User
+
+# Create VS Code user directory if it doesn't exist
 mkdir -p "$VSCODE_USER_DIR"
 
 # Copy settings to VS Code user directory
