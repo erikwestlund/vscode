@@ -3,7 +3,6 @@
     "files.associations": {
         "*.rmd": "markdown"
     },
-    "workbench.colorTheme": "Night Owl Black",
     "[php]": {
         "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
     },
@@ -12,7 +11,15 @@
         "pwshCode": true,
         "pwshGit": true
     },
-    "r.rpath.mac": "/usr/local/bin/R",
+    "terminal.integrated.fontFamily": "Fira Code",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.defaultProfile.osx": "NA Accord (tmux)",
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.tabs.location": "left",
+    "terminal.integrated.tabs.showActiveTerminal": "always",
+    "terminal.integrated.tabs.focusMode": "singleClick",
+    "terminal.integrated.profiles.enabled": true,
     "terminal.integrated.profiles.osx": {
         "Better Shoes (zsh)": {
             "path": "/opt/homebrew/bin/zsh",
@@ -33,13 +40,19 @@
             "icon": "terminal-zsh",
             "group": "framework",
             "overrideName": true
+        },
+        "NA Accord (tmux)": {
+            "path": "/opt/homebrew/bin/zsh",
+            "args": [
+                "-c",
+                "cd ${workspaceFolder} && tmux attach -t na || (./start_dev.sh && tmux attach -t na)"
+            ],
+            "icon": "terminal-tmux",
+            "group": "na",
+            "overrideName": true
         }
     },
-    "terminal.integrated.profiles.enabled": true,
-    "terminal.integrated.tabs.enabled": true,
-    "terminal.integrated.tabs.location": "left",
     "terminal.integrated.tabs.showActiveTerminal": "always",
-    "terminal.integrated.tabs.focusMode": "singleClick",
     "[r]": {
         "rterm.mac": "/usr/local/bin/R",
         "rterm.option": [
@@ -72,5 +85,26 @@
             "--no-restore"
         ],
         "lsp.useGlobalR": true
-    }
+    },
+    "workbench.colorCustomizations": {
+        "terminal.background": "#1a1b26",
+        "terminal.foreground": "#a9b1d6",
+        "terminal.ansiBlack": "#24283b",
+        "terminal.ansiBlue": "#7aa2f7",
+        "terminal.ansiBrightBlack": "#414868",
+        "terminal.ansiBrightBlue": "#7aa2f7",
+        "terminal.ansiBrightCyan": "#7dcfff",
+        "terminal.ansiBrightGreen": "#9ece6a",
+        "terminal.ansiBrightMagenta": "#bb9af7",
+        "terminal.ansiBrightRed": "#f7768e",
+        "terminal.ansiBrightWhite": "#c0caf5",
+        "terminal.ansiBrightYellow": "#e0af68",
+        "terminal.ansiCyan": "#7dcfff",
+        "terminal.ansiGreen": "#9ece6a",
+        "terminal.ansiMagenta": "#bb9af7",
+        "terminal.ansiRed": "#f7768e",
+        "terminal.ansiWhite": "#c0caf5",
+        "terminal.ansiYellow": "#e0af68"
+    },
+    "workbench.colorTheme": "Night Owl Black"
 }
