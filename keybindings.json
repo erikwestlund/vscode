@@ -345,5 +345,20 @@
         "key": "ctrl+shift+d",
         "command": "workbench.action.tasks.runTask",
         "args": "R: Document Package"
+    },
+    {
+        "key": "alt+shift+1",
+        "command": "workbench.view.explorer",
+        "when": "sideBarVisible"
+    },
+    {
+        "key": "alt+shift+2",
+        "command": "workspaceViewer.focus",
+        "when": "sideBarVisible"
+    },
+    {
+        "key": "shift+cmd+i",
+        "command": "workspaceViewer.focus",
+        "when": "sideBarVisible"
     }
 ]
