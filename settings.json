@@ -41,36 +41,34 @@
     "terminal.integrated.tabs.showActiveTerminal": "always",
     "terminal.integrated.tabs.focusMode": "singleClick",
     "[r]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.defaultFormatter": "REditorSupport.r",
         "rterm.mac": "/usr/local/bin/R",
         "rterm.option": [
             "--no-save",
             "--no-restore"
         ],
-        "editor.tabSize": 2,
-        "editor.insertSpaces": true,
-        "editor.detectIndentation": false,
-        "editor.defaultFormatter": "REditorSupport.r",
+        "rterm.enabled": true,
+        "alwaysUseActiveTerminal": true,
+        "bracketedPaste": true,
         "lsp.enabled": true,
+        "lsp.args": [
+            "--no-save",
+            "--no-restore"
+        ],
+        "lsp.diagnostics": true,
         "linting.enable": true,
         "linting.lintOnSave": true,
         "linting.lintr.options": {
             "indent_by": 2
         },
-        "plot.useHttpgd": true,
         "sessionInit": true,
-        "initPath": "~/.vscode-R/init.R", // or absolute path
+        "initPath": "~/.vscode-R/init.R",
         "sessionWatcher.enabled": true,
         "sessionWatcher.syncEnvironments": true,
-        "bracketedPaste": true,
         "workspaceViewer.enabled": true,
-        "lsp.diagnostics": true,
-        "rterm.enabled": true,
-        "alwaysUseActiveTerminal": true,
-        "lsp.path": "/usr/local/bin/R",
-        "lsp.args": [
-            "--no-save",
-            "--no-restore"
-        ],
-        "lsp.useGlobalR": true
+        "plot.useHttpgd": true
     }
 }
