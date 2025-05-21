@@ -13,11 +13,9 @@
     },
     "terminal.integrated.fontFamily": "Fira Code",
     "terminal.integrated.fontSize": 12,
-    "terminal.integrated.defaultProfile.osx": "NA Accord (tmux)",
     "terminal.integrated.gpuAcceleration": "on",
     "terminal.integrated.tabs.enabled": true,
     "terminal.integrated.tabs.location": "left",
-    "terminal.integrated.tabs.showActiveTerminal": "always",
     "terminal.integrated.tabs.focusMode": "singleClick",
     "terminal.integrated.profiles.enabled": true,
     "terminal.integrated.profiles.osx": {

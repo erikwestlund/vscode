@@ -298,27 +298,6 @@
         "when": "terminalFocus"
     },
     {
-        "key": "cmd+shift+t",
-        "command": "workbench.action.terminal.newWithProfile",
-        "args": {
-            "profile": "Better Shoes (zsh)"
-        }
-    },
-    {
-        "key": "cmd+shift+r",
-        "command": "workbench.action.terminal.newWithProfile",
-        "args": {
-            "profile": "Better Shoes (R)"
-        }
-    },
-    {
-        "key": "cmd+shift+f",
-        "command": "workbench.action.terminal.newWithProfile",
-        "args": {
-            "profile": "Framework (zsh)"
-        }
-    },
-    {
         "key": "cmd+shift+g",
         "command": "workbench.action.terminal.newWithProfile",
         "args": {
