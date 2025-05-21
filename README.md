@@ -64,9 +64,9 @@ alias curtovs='cd ~/code/vscode && ./cursor-to-code.sh'
 
 ## Ensure VS Code R Extension Attaches To Workspace
 
-The REditorSupport `R` extension will attempt to attach itself to the workspace upon opening an R terminal, but this often fails due to a race condition. 
+The REditorSupport `R` extension will attempt to attach itself to the workspace upon opening an R terminal, but this often fails due to a race condition.
 
-The R extensions work by creating the file `~/.vscode-R/init.R`, which sources a separate file. For example, on the latest build of the extension, when installed from Cursor, the extensions creates and sources this file: `~/.cursor/extensions/reditorsupport.r-2.8.5/R/session/init.R`
+The R extension works by creating the file `~/.vscode-R/init.R`, which sources a separate file. For example, on the latest build of the extension, when installed from Cursor, the extensions creates and sources this file: `~/.cursor/extensions/reditorsupport.r-2.8.5/R/session/init.R`
 
 To fix this, find the `init.R` sourced in `~/.vscode-R/init.R`, and add the following to it:
 
@@ -100,4 +100,4 @@ It's also fine to just run `.vsc.attach()` in an R session when you need the Wor
 
 ## Note
 
-After syncing settings, you may need to restart the respective editor for changes to take effect. 
+After syncing settings, you may need to restart the respective editor for changes to take effect.
