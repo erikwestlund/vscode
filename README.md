@@ -66,9 +66,9 @@ alias curtovs='cd ~/code/vscode && ./cursor-to-code.sh'
 
 The REditorSupport `R` extension will attempt to attach itself to the workspace upon opening an R terminal, but this often fails due to a race condition.
 
-The R extension works by creating the file `~/.vscode-R/init.R`, which sources a separate file. For example, on the latest build of the extension, when installed from Cursor, the extensions creates and sources this file: `~/.cursor/extensions/reditorsupport.r-2.8.5/R/session/init.R`
+The R extension works by creating the file `~/.vscode-R/init.R`, which sources a separate file. For example, on the latest build of the extension, when installed from Cursor, the extension creates and sources this file: `~/.cursor/extensions/reditorsupport.r-2.8.5/R/session/init.R`
 
-To fix this, find the `init.R` sourced in `~/.vscode-R/init.R`, and add the following to it:
+To fix this problem, find the `init.R` sourced in `~/.vscode-R/init.R`, and add the following to the end:
 
 ```r
 if (requireNamespace("later", quietly = TRUE)) {
