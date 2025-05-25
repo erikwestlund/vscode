@@ -1,8 +1,37 @@
 // Place your key bindings in this file to override the defaults
 [
     {
+        "key": "cmd+o",
+        "command": "composerMode.chat"
+    },
+    {
         "key": "cmd+i",
         "command": "composerMode.agent"
+    },
+    {
+        "key": "cmd+shift+m",
+        "command": "type",
+        "args": {
+            "text": " |> "
+        },
+        "when": "editorLangId == r || terminalType == r || terminalType == r-interactive"
+    },
+    {
+        "key": "cmd+shift+click",
+        "command": "r.runCommandWithEditorPath",
+        "args": "view_df(${selection})",
+        "when": "editorLangId == 'r'"
+    },
+    {
+        "key": "cmd+shift+v",
+        "command": "workbench.action.tasks.runTask",
+        "args": "View Data Frame",
+        "when": "editorLangId == 'r'"
+    },
+    {
+        "key": "cmd+shift+t",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Open All Terminals"
     },
     {
         "key": "shift+cmd+s shift+cmd+r",
@@ -200,30 +229,6 @@
         "when": "!quartoRenderScriptActive"
     },
     {
-        "key": "cmd+e",
-        "command": "editor.action.accessibleViewGoToSymbol",
-        "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
-    },
-    {
-        "key": "shift+cmd+o",
-        "command": "-editor.action.accessibleViewGoToSymbol",
-        "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
-    },
-    {
-        "key": "cmd+e",
-        "command": "-actions.findWithSelection"
-    },
-    {
-        "key": "cmd+e",
-        "command": "-editor.action.toggleScreenReaderAccessibilityMode",
-        "when": "accessibilityHelpIsShown"
-    },
-    {
-        "key": "cmd+e",
-        "command": "workbench.action.gotoSymbol",
-        "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
-    },
-    {
         "key": "shift+cmd+o",
         "command": "-workbench.action.gotoSymbol",
         "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
@@ -251,11 +256,28 @@
     },
     {
         "key": "cmd+shift+m",
-        "command": "editor.action.insertSnippet",
+        "command": "type",
         "args": {
-            "snippet": "|> "
+            "text": " |> "
         },
-        "when": "editorTextFocus"
+        "when": "editorLangId == r || terminalType == r || terminalType == r-interactive"
+    },
+    {
+        "key": "cmd+shift+click",
+        "command": "r.runCommandWithEditorPath",
+        "args": "view_df(${selection})",
+        "when": "editorLangId == 'r'"
+    },
+    {
+        "key": "cmd+shift+v",
+        "command": "workbench.action.tasks.runTask",
+        "args": "View Data Frame",
+        "when": "editorLangId == 'r'"
+    },
+    {
+        "key": "cmd+shift+t",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Open All Terminals"
     },
     {
         "key": "cmd+shift+[",
@@ -318,12 +340,14 @@
     {
         "key": "ctrl+shift+b",
         "command": "workbench.action.tasks.runTask",
-        "args": "R: Build Package"
+        "args": "R: Build Package",
+        "when": "editorLangId == r"
     },
     {
         "key": "ctrl+shift+d",
         "command": "workbench.action.tasks.runTask",
-        "args": "R: Document Package"
+        "args": "R: Document Package",
+        "when": "editorLangId == r"
     },
     {
         "key": "alt+shift+1",
