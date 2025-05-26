@@ -229,20 +229,25 @@
         "when": "!quartoRenderScriptActive"
     },
     {
-        "key": "shift+cmd+o",
-        "command": "-workbench.action.gotoSymbol",
+        "key": "cmd+r",
+        "command": "workbench.action.gotoSymbol",
         "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+    },
+    {
+        "key": "cmd+shift+o",
+        "command": "workbench.action.gotoSymbol",
+        "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+    },
+    {
+        "key": "cmd+shift+o",
+        "command": "-workbench.action.tasks.runTask",
+        "args": "Format File",
+        "when": "editorLangId == python || editorLangId == r"
     },
     {
         "key": "cmd+e",
         "command": "workbench.action.terminal.openDetectedLink",
         "when": "terminalFocus && terminalHasBeenCreated"
-    },
-    {
-        "key": "shift+cmd+o",
-        "command": "workbench.action.tasks.runTask",
-        "args": "Format File",
-        "when": "editorLangId == python || editorLangId == r"
     },
     {
         "key": "cmd+shift+o",
