@@ -10,11 +10,19 @@
     },
     {
         "key": "cmd+shift+m",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "|> "
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+shift+m",
         "command": "type",
         "args": {
-            "text": " |> "
+            "text": "|> "
         },
-        "when": "editorLangId == r || terminalType == r || terminalType == r-interactive"
+        "when": "editorTextFocus"
     },
     {
         "key": "cmd+shift+click",
