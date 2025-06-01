@@ -26,24 +26,30 @@ This repository helps you maintain and sync your VS Code and Cursor editor setti
 
 ## Recommended Aliases
 
-Add these to your `.aliases` file for easy access:
+Add these to your `.aliases` file for easy access. These aliases will run the scripts from any directory and return you to your original location:
 
 ```bash
 # Navigation
 alias vscode='cd ~/code/vscode'
 
-# Push to GitHub
-alias vspush='cd ~/code/vscode && ./push-from-code.sh'
-alias curpush='cd ~/code/vscode && ./push-from-cursor.sh'
+# Push to GitHub (from any directory)
+alias vspush='CWD=$(pwd) && cd ~/code/vscode && ./push-from-code.sh && cd "$CWD"'
+alias curpush='CWD=$(pwd) && cd ~/code/vscode && ./push-from-cursor.sh && cd "$CWD"'
 
-# Pull from GitHub
-alias vspull='cd ~/code/vscode && ./sync-from-code.sh'
-alias curpull='cd ~/code/vscode && ./sync-from-cursor.sh'
+# Pull from GitHub (from any directory)
+alias vspull='CWD=$(pwd) && cd ~/code/vscode && ./sync-from-code.sh && cd "$CWD"'
+alias curpull='CWD=$(pwd) && cd ~/code/vscode && ./sync-from-cursor.sh && cd "$CWD"'
 
-# Sync between editors
-alias vstocur='cd ~/code/vscode && ./code-to-cursor.sh'
-alias curtovs='cd ~/code/vscode && ./cursor-to-code.sh'
+# Sync between editors (from any directory)
+alias vstocur='CWD=$(pwd) && cd ~/code/vscode && ./code-to-cursor.sh && cd "$CWD"'
+alias curtovs='CWD=$(pwd) && cd ~/code/vscode && ./cursor-to-code.sh && cd "$CWD"'
 ```
+
+The key difference is using a variable to store the current working directory:
+1. `CWD=$(pwd)` saves your current location
+2. `cd ~/code/vscode` changes to the vscode directory
+3. Run the script
+4. `cd "$CWD"` returns you to your original location
 
 ## Usage Examples
 

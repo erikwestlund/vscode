@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Save the current directory
-ORIGINAL_DIR=$(pwd)
-
 # Get the directory where the script is located
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$SCRIPT_DIR"
@@ -27,7 +24,4 @@ mkdir -p "$CURSOR_USER_DIR/snippets"
 echo "Copying code snippets..."
 cp "$VSCODE_USER_DIR/snippets/"*.code-snippets "$CURSOR_USER_DIR/snippets/" 2>/dev/null || true
 
-echo "Sync complete! Please restart Cursor for changes to take effect."
-
-# Return to the original directory
-cd "$ORIGINAL_DIR" 
+echo "Sync complete! Please restart Cursor for changes to take effect." 
