@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Save the current directory
+ORIGINAL_DIR=$(pwd)
+
 # Get the directory where the script is located
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$SCRIPT_DIR"
@@ -26,4 +29,7 @@ git add .
 git commit -m "Sync VS Code settings: $(date +%Y-%m-%d\ %H:%M:%S)"
 git push
 
-echo "Sync complete! Settings have been pushed to GitHub." 
+echo "Sync complete! Settings have been pushed to GitHub."
+
+# Return to the original directory
+cd "$ORIGINAL_DIR" 
