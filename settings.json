@@ -105,5 +105,7 @@
         "terminal.ansiYellow": "#e0af68"
     },
     "workbench.colorTheme": "Night Owl Black",
-    "terminal.integrated.enableMultiLinePasteWarning": false
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "quarto.preview.inBrowser": true,
+    "quarto.render.previewType": "external"
 }
