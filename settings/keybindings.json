@@ -1,8 +1,16 @@
 // Place your key bindings in this file to override the defaults
 [
     {
+        "key": "cmd+l",
+        "command": "kilo-code.focusKiloCodeView"
+    },
+    {
         "key": "cmd+o",
-        "command": "composerMode.chat"
+        "command": "kilo-code.newTask"
+    },
+    {
+        "key": "cmd+r",
+        "command": "kilo-code.generateSuggestedEdits"
     },
     {
         "key": "cmd+i",
