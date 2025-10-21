@@ -107,5 +107,6 @@
     "workbench.colorTheme": "Catppuccin Mocha",
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "quarto.preview.inBrowser": true,
-    "quarto.render.previewType": "external"
+    "quarto.render.previewType": "external",
+    "editor.minimap.enabled": false
 }
